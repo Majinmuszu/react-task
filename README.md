@@ -1,2 +1,2 @@
 
-Simple React random quote generator.
+Simple React random quote generator (api fetch).
