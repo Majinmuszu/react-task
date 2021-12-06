@@ -1,5 +1,6 @@
 import "./App.css";
-import Quote from "./components/Quote";
+import Quote from "./components/Quote/Quote";
+import Button from "./components/Button/Button";
 
 import React, { Component } from "react";
 
@@ -45,8 +46,6 @@ export class App extends Component {
       newQuotes: [...newQuotes, newQuote],
     }));
     this.setIdx();
-    console.log(this.state.newQuotes);
-    console.log(this.state.idx);
     return this.state.newQuotes;
   };
   prevQuote = () => {
@@ -66,11 +65,8 @@ export class App extends Component {
     return (
       <div className="App">
         <Quote quote={quote} />
-
-        <button type="button" onClick={() => this.prevQuote()}>&#9194; PREVIOUS QUOTE</button>
-        <button type="button" onClick={() => this.setNewQuote()}>
-        &#127922; NEW RANDOM QUOTE
-        </button>
+        <Button func={this.prevQuote} text={ 'GET PREVIOUS QUOTE'}/>
+        <Button func={this.setNewQuote} text={'NEW RANDOM QUOTE'}/>
       </div>
     );
   }

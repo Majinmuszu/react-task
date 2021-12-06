@@ -1,0 +1,12 @@
+.error {
+    font-size: 20px;
+}
+.quote {
+    font-style: italic;
+    font-size: 25px;
+}
+.author {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
